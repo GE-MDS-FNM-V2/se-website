@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GE MDS Field Network Manager V2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"
+    />
+  </head>
+  <body>
+
+    <div class="container">
+        <h1 class="text-muted">GE MDS Field Network Manager V2</h1>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="metrics.html">Metrics</a>
+            </li>
+        </ul>
+      <h1>Measurements and Metrics</h1>
+      <p>
+          We plan to collect the following measurements:
+          <ul>
+              <li>Total story points completed per sprint (i.e., the sprint velocity)</li>
+              <li>Total story points committed to per sprint</li>
+              <li>Total Product Backlog items (PBIs) completed per sprint</li>
+              <li>Hours worked by the team per week for each member</li>
+              <li>(Once applicable) total tests run during builds</li>
+              <li>(Once applicable) total code coverage per each source code file tested during builds; this should be collected both as a percentage and as a numerical value (i.e., no. of lines covered by tests)</li>
+          </ul>
+      </p>
+      <p>
+          From these measurements, we derive the following metrics
+        <ol>
+            <li>PBI Density, which is the calculation (no. of story points completed) / (no. of PBIs completed). This will give us an idea of how "dense" our PBIs are on average - how complex they are and how much work we typically think they'll take. The most apparent use case for this metric is during grooming sessions, where we reassess the backlog. If we notice that our PBIs seem disproportionately more or less dense than expected, we can assess remaining PBIs to determine if they need to be broken up or combined.</li>
+            <li>Sprint Velocity, which is simply the total story points completed per sprint. Velocity on its own is a useful metric for determining team capacity per sprint, and will help us better evaluate our maximal workload during a single sprint over the course of this project.</li>
+            <li>Expected vs. Actual Completed Story Points, which is simply the difference between the total completed story points per sprint and the total committed story points per sprint divided by the total completed story points. This will help us keep an eye on how reliable our expectations are for capacity and project goals.</li>
+            <li>Test Coverage per Source Code File, which is the calculation (no. of lines covered by tests) / (no. of tests covering the source code file). This metric will let us know how complex our tests are, and thus whether we need to refactor them. A crucial aspect of writing tests is to make them *simple* - making sure they only test one thing and in only one respect. Knowing average code coverage per test can help us assess this and determine what we need to do next. This can also help us find areas of code that need refactoring. For example, if a specific source code file has a lot of tests covering it, that could be a sign of blobs, spaghetti code, or numerous other problems.</li>
+        </ol>
+      </p>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
